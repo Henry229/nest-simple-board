@@ -19,8 +19,8 @@ export class BoardController {
   }
 
   @Get(':id')
-  find(@Param('id') id: number) {
-    return `This action returns a #${id} board`;
+  find(@Param('id') id: string) {
+    return this.boardService.find(id);
   }
 
   @Post()
